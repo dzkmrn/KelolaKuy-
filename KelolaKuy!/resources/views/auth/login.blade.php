@@ -4,7 +4,7 @@
 <main>
     <div class="container">
 
-        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <section class="section register min-vh-90 d-flex flex-column align-items-center justify-content-center py-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
@@ -66,7 +66,7 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <p class="small mb-0">Don't have account? <a style="color: #AAC4FF;" href="pages-register.html">Create an account</a></p>
+                                        <p class="small mb-0">Don't have account? <a style="color: #AAC4FF;" href="register">Create an account</a></p>
                                     </div>
 
                                 </form>
