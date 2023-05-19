@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'Masuk')
+
 @section('content')
-<main>
     <div class="container">
 
         <section class="section register min-vh-90 d-flex flex-column align-items-center justify-content-center py-5">
@@ -14,7 +15,7 @@
                             </a>
                         </div><!-- End Logo -->
 
-                        <div class="card mb-3" style="  margin-bottom: 30px;border: none;border-radius: 5px;box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);">
+                        <div class="card mb-3" style="margin-bottom: 30px;border: none;border-radius: 5px;box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);">
 
                             <div class="card-body">
 
@@ -26,6 +27,16 @@
                                     <p class="text-center small">Masukkan username dan password anda!</p>
                                 </div>
 
+                                @if(count($errors))
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                @endif
+
                                 <form class="row g-3 needs-validation" method="POST" action="{{ route('login') }}">
                                     @csrf
 
@@ -34,7 +45,7 @@
                                         <div class="input-group has-validation">
                                             <span class="input-group-text" id="inputGroupPrepend">@</span>
                                             <input type="text" name="username" value="{{ old('username') }}" class="form-control" id="username" required autocomplete="username" autofocus>
-                                            <div class="invalid-feedback">Please enter your username.</div>
+                                            <div class="invalid-feedback">Tolong masukkan username anda!</div>
                                             @error('username')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -46,6 +57,7 @@
                                     <div class="col-12">
                                         <label for="password" class="form-label">{{ __('Password') }}</label>
                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                        <div class="invalid-feedback">Tolong masukkan password anda!</div>
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -62,12 +74,12 @@
 
                                     <div class="button-login">
                                         <div class="col-12">
-                                            <button class="btn btn-info w-100" style="background-color: #AAC4FF;color: white;" type="submit">Login</button>
+                                            <button class="btn w-100" style="background-color: #AAC4FF;color: white;" type="submit">Masuk</button>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <p class="small mb-0">Don't have account? <a style="color: #AAC4FF;" href="register">Create an account</a></p>
+                                        <p class="small mb-0">Tidak memiliki akun? <a style="color: #AAC4FF;" href="register">Buat Akun</a></p>
                                     </div>
 
                                 </form>
@@ -79,6 +91,6 @@
 
         </section>
 
+
     </div>
-</main><!-- End #main -->
 @endsection
