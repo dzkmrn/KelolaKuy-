@@ -83,7 +83,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="../../index3.html" class="brand-link">
+      <a href="{{ url('kelolakuylog') }}" class="brand-link">
         <img src="../../dist/img/k_logo_big.png" class="brand-image img-responsive" style="opacity: .8">
         <span class="brand-text font-weight-light">KelolaKuy</span>
       </a>

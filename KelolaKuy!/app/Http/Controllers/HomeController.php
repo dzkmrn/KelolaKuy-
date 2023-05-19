@@ -33,4 +33,10 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('adminHome', ['user'=>$user]);
     }
+
+    public function landingPageLog()
+    {
+        $user = Auth::user();
+        return view('kelolakuylog', ['user'=>$user]);
+    }
 }

@@ -45,4 +45,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
 });
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/kelolakuylog', [HomeController::class, 'landingPageLog'])->name('kelolakuylog');
+});
+
 
