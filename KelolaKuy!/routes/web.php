@@ -16,7 +16,11 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('kelolakuy');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -40,3 +44,9 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
   
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
 });
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/kelolakuylog', [HomeController::class, 'landingPageLog'])->name('kelolakuylog');
+});
+
+
