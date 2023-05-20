@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kategori', function (Blueprint $table) {
-            $table->int('id_kategori', 25)->index()->primary();
+            $table->bigInteger('id_kategori')->index()->primary();
             $table->string('kategori_alat', 100)->index();
             $table->string('deskripsi_kategori', 100)->index();
         });
