@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('peminjam', function (Blueprint $table) {
-            $table->int('nim', 25)->index()->primary();
+            $table->bigInteger('nim')->index()->primary();
             $table->string('nama_peminjam', 100)->index();
             $table->string('jenis_kelamin', 50)->index();
             $table->string('prodi', 100)->index();

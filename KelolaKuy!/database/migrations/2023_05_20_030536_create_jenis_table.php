@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('jenis', function (Blueprint $table) {
-            $table->int('id_jenis', 25)->index()->primary();
+            $table->bigInteger('id_jenis')->index()->primary();
             $table->string('jenis_alat', 100)->index();
             $table->string('deskripsi_jenis', 100)->index();
         });
