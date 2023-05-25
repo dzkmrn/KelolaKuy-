@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,4 +52,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/kelolakuylog', [HomeController::class, 'landingPageLog'])->name('kelolakuylog');
 });
 
+
+Route::resource('kategori', KategoriController::class);
 
