@@ -18,12 +18,27 @@ class JenisSeeder extends Seeder
         $data = [
             [
                 'id_jenis'=>01,
-                'jenis_alat'=>'',
+                'jenis_alat'=>'Peralatan Makan',
                 'deskripsi_jenis'=>'',
             ],
             [
                 'id_jenis'=>02,
-                'jenis_alat'=>'',
+                'jenis_alat'=>'Peralatan Tidur',
+                'deskripsi_jenis'=>'',
+            ],
+            [
+                'id_jenis'=>03,
+                'jenis_alat'=>'Kebutuhan Lain',
+                'deskripsi_jenis'=>'',
+            ],
+            [
+                'id_jenis'=>04,
+                'jenis_alat'=>'Peralatan Kebersihan',
+                'deskripsi_jenis'=>'',
+            ],
+            [
+                'id_jenis'=>05,
+                'jenis_alat'=>'Peralatan Keselamatan',
                 'deskripsi_jenis'=>'',
             ],
         ];
