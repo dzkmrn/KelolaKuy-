@@ -15,7 +15,7 @@ class KategoriController extends Controller
     public function index()
     {
         $kategori = Kategori::paginate(5); // Mengambil 5 isi tabel
-        return view('kategori.index', compact('kategori'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('kategori', compact('kategori'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
