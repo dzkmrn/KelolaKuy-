@@ -27,7 +27,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="{{ url('matkul') }}" class="nav-link">
+      <a href="{{ url('peminjam') }}" class="nav-link">
         <i class="nav-icon fa  fa fa-users"></i>
         <p>
           Peminjam
@@ -35,7 +35,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="{{ url('matkul') }}" class="nav-link">
+      <a href="{{ url('peminjaman') }}" class="nav-link">
         <i class="nav-icon fa fa-exchange" aria-hidden="true"></i>
         <p>
           Peminjaman

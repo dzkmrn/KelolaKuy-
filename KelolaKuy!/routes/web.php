@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\JenisController;
+use App\Http\Controllers\PeminjamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,4 +58,6 @@ Route::group(['middleware' => 'auth'], function () {
 Route::resource('kategori', KategoriController::class);
 
 Route::resource('jenis', JenisController::class);
+
+Route::resource('peminjam', PeminjamController::class);
 
