@@ -19,7 +19,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="{{ url('pengalaman-kuliah') }}" class="nav-link">
+      <a href="{{ url('jenis') }}" class="nav-link">
         <i class="nav-icon fa fa-graduation-cap"></i>
         <p>
           Jenis
