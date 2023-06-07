@@ -9,7 +9,13 @@
     <div class="col-lg-12 margin-tb">
         <div class="pull-left mt-2">
         </div>
-
+        <form class="form-left my-2" method="get" action="">
+                    <div class="form-group w-70 mb-3">
+                        <input type="text" name="search" class="form-control w-50 d-inline" id="search" placeholder="Masukkan Nama">
+                        <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                        <a class="btn btn-success right" href="{{ route('kategori.create') }}" style="margin-left:9.6cm">Input Kategori</a>
+                    </div>
+            </form>
     </div>
 </div>
 
@@ -33,7 +39,7 @@
 
         <td>{{ $kategoris->id_kategori }}</td>
         <td>{{ $kategoris->kategori_alat }}</td>
-        <td>{{ $kategoris->foto }}</td>
+        <td><img width="100px" src="{{asset('storage/'.$kategoris->foto)}}"></td>
         <td>{{ $kategoris->deskripsi_kategori }}</td>
         <td>
             <form action="{{ route('kategori.destroy',$kategoris->id_kategori) }}" method="POST">

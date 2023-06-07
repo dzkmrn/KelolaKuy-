@@ -41,6 +41,7 @@ class KategoriController extends Controller
         $request->validate([
             'id_kategori' => 'required',
             'kategori_alat' => 'required',
+            'foto' => 'required',
             'deskripsi_kategori' => 'required',
         ]);
 
@@ -82,14 +83,19 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id_kategori)
     {
-        $request->validate([
-            'id_kategori' => 'required',
-            'kategori_alat' => 'required',
-            'deskripsi_kategori' => 'required',
-        ]);
+        $kategori = Kategori::find($id_kategori);
 
-        Kategori::find($id_kategori)->update($request->all());
+        $kategori->kategori_alat = $request->kategori_alat;
+        $kategori->deskripsi_kategori = $request->deskripsi_kategori;
 
+        if ($kategori->foto && file_exists(storage_path('app/public/' .$kategori->foto))) {
+            Storage::delete('public/' .$kategori->foto);
+        }
+
+        $foto = $request->file('foto')->store('images', 'public');
+        $kategori->foto = $foto;
+
+        $kategori->save();
         return redirect()->route('kategori.index')->with('success', 'Kategori Berhasil Diupdate');
     }
 

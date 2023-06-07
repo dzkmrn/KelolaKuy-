@@ -21,8 +21,8 @@
                 </div>
                 @endif
                 <form method="post" action="{{ route('kategori.update', $kategori->id_kategori) }}" id="myForm" enctype="multipart/form-data">
-                    @csrf
                     @method('PUT')
+                    @csrf
                     <div class="form-group">
                         <label for="id_kategori">ID Kategori</label>
                         <input type="text" name="id_kategori" class="form-control" id="id_kategori" value="{{ $kategori->id_kategori }}" ariadescribedby="id_kategori">
@@ -30,6 +30,11 @@
                     <div class="form-group">
                         <label for="kategori_alat">Kategori Alat</label>
                         <input type="text" name="kategori_alat" class="form-control" id="kategori_alat" value="{{ $kategori->kategori_alat }}" ariadescribedby="id_kategori">
+                    </div>
+                    <div class="form-group">
+                        <label for="foto">Gambar</label>
+                        <input type="file" class="form-control" required="required" name="foto" value="{{$kategori->foto}}"></br>
+                        <img width="150px" src="{{asset('storage/'.$kategori->foto)}}">
                     </div>
                     <div class="form-group">
                         <label for="deskripsi_kategori">Deskripsi Kategori</label><br>
