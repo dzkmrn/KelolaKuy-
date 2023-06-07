@@ -1,4 +1,6 @@
-@extends('layouts.main')
+@section('title', 'KelolaKuy!')
+
+@extends('layouts.mainCustomer')
 
 @section('isi')
 <div class="container">

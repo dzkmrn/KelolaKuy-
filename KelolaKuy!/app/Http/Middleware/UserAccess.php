@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use app\Models\User;
 
 class UserAccess
 {
@@ -19,8 +20,6 @@ class UserAccess
         if(auth()->user()->level == $userLevel){
             return $next($request);
         }
-
-        return response()->json(['You do not have permission to access for this page.']);
-        /* return response()->view('errors.check-permission'); */
+        return response( )->json(['You do not have permission to access for this page.']);
     }
 }

@@ -6,15 +6,15 @@
       <a href="{{ url('kategori') }}" class="nav-link">
         <i class="nav-icon fas fa-tachometer-alt"></i>
         <p>
-          ?
+          Kategori
         </p>
       </a>
     </li>
     <li class="nav-item">
       <a href="{{ url('profile') }}" class="nav-link">
-        <i class="nav-icon fa fa-users"></i>
+        <i class="nav-icon fa fa-archive"></i>
         <p>
-          ?
+          Alat
         </p>
       </a>
     </li>
@@ -22,15 +22,31 @@
       <a href="{{ url('pengalaman-kuliah') }}" class="nav-link">
         <i class="nav-icon fa fa-graduation-cap"></i>
         <p>
-          ?
+          Jenis
         </p>
       </a>
     </li>
     <li class="nav-item">
       <a href="{{ url('matkul') }}" class="nav-link">
-        <i class="nav-icon fa  fa-book"></i>
+        <i class="nav-icon fa  fa fa-users"></i>
         <p>
-          ?
+          Peminjam
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="{{ url('matkul') }}" class="nav-link">
+        <i class="nav-icon fa fa-exchange" aria-hidden="true"></i>
+        <p>
+          Peminjaman
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="{{ url('matkul') }}" class="nav-link">
+        <i class="nav-icon fa  fa fa-check-square"></i>
+        <p>
+          Checklist
         </p>
       </a>
     </li>

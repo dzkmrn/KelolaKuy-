@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Kategori;
 use Illuminate\Http\Request;
+use app\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 class KategoriController extends Controller
 {
