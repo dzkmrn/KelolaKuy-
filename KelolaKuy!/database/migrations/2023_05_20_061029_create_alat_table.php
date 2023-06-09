@@ -16,8 +16,10 @@ return new class extends Migration
     {
         Schema::create('alat', function (Blueprint $table) {
             $table->bigInteger('id_alat')->index()->primary();
-            $table->bigInteger('id_kategori')->index();
-            $table->bigInteger('id_jenis')->index();
+            // Update table jadi nullable
+            $table->bigInteger('id_kategori')->index()->nullable();
+            $table->bigInteger('id_jenis')->index()->nullable();
+            // end update
             $table->string('nama_alat', 100)->index();
             $table->string('foto_alat')->index();
             $table->string('merk_alat', 100)->index();
