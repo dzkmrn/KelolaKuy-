@@ -11,7 +11,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="{{ url('profile') }}" class="nav-link">
+      <a href="{{ url('alat') }}" class="nav-link">
         <i class="nav-icon fa fa-archive"></i>
         <p>
           Alat

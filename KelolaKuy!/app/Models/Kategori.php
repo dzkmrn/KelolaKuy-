@@ -17,4 +17,9 @@ class Kategori extends Model
         'foto',
         'deskripsi_kategori',
     ];
+
+    public function alat()
+    {
+        return $this->hasMany(Alat::class,'id_alat');
+    }
 }

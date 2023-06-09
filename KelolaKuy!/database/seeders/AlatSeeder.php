@@ -22,7 +22,7 @@ class AlatSeeder extends Seeder
                 'id_jenis'=>01,
                 'nama_alat'=>'Peralatan Makan',
                 'foto_alat'=>'',
-                'merek_alat'=>'',
+                'merk_alat'=>'',
                 'stok_alat'=>''
             ],
             [
@@ -31,7 +31,7 @@ class AlatSeeder extends Seeder
                 'id_jenis'=>01,
                 'nama_alat'=>'Peralatan Makan',
                 'foto_alat'=>'',
-                'merek_alat'=>'',
+                'merk_alat'=>'',
                 'stok_alat'=>''
             ],
             [
@@ -40,7 +40,7 @@ class AlatSeeder extends Seeder
                 'id_jenis'=>01,
                 'nama_alat'=>'Peralatan Makan',
                 'foto_alat'=>'',
-                'merek_alat'=>'',
+                'merk_alat'=>'',
                 'stok_alat'=>''
             ],
             [
@@ -49,7 +49,7 @@ class AlatSeeder extends Seeder
                 'id_jenis'=>01,
                 'nama_alat'=>'Peralatan Makan',
                 'foto_alat'=>'',
-                'merek_alat'=>'',
+                'merk_alat'=>'',
                 'stok_alat'=>''
             ],
             [
@@ -58,10 +58,10 @@ class AlatSeeder extends Seeder
                 'id_jenis'=>01,
                 'nama_alat'=>'Peralatan Makan',
                 'foto_alat'=>'',
-                'merek_alat'=>'',
+                'merk_alat'=>'',
                 'stok_alat'=>''
             ],
         ];
-        DB::table('jenis')->insert($data);
+        DB::table('alat')->insert($data);
     }
 }

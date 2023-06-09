@@ -16,4 +16,9 @@ class Jenis extends Model
         'jenis_alat',
         'deskripsi_jenis',
     ];
+
+    public function alat()
+    {
+        return $this->hasMany(Alat::class,'id_alat');
+    }
 }

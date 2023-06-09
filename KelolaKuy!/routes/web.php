@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlatController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
@@ -53,7 +54,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/kelolakuylog', [HomeController::class, 'landingPageLog'])->name('kelolakuylog');
 });
-
+// Route ke page alat
+Route::resource('alat', AlatController::class);
 
 Route::resource('kategori', KategoriController::class);
 
